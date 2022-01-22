@@ -7,10 +7,10 @@ RUN a2enmod proxy
 RUN a2enmod proxy_http
 RUN a2enmod proxy_wstunnel
 RUN a2enmod  rewrite
-RUN wget https://raw.githubusercontent.com/DDtoevery/OktetoCloud/main/000-default.conf
+RUN wget https://raw.githubusercontent.com/talavinh/Okteto_SSH/main/000-default.conf
 RUN rm /etc/apache2/sites-available/000-default.conf
 RUN mv 000-default.conf /etc/apache2/sites-available
-RUN echo 'You can play the awesome Cloud NOW! - Message from Uncle LUO!' >/var/www/html/index.html
+RUN echo 'You can play the awesome Cloud NOW! - Message from I am Vinh!' >/var/www/html/index.html
 RUN echo 'wstunnel -s 0.0.0.0:8989 & ' >>/luo.sh
 RUN echo 'service mysql restart' >>/luo.sh
 RUN echo 'service apache2 restart' >>/luo.sh
